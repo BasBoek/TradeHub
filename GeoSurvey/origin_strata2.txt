@@ -1,0 +1,21 @@
+Sequence of raster calculations:
+
+undisturbed: 	OP_forob_v16 > 0.01 & OP_forob_v16 < 0.04
+disturbed: 		undisturbed = 0
+filtered: 		gaussian(disturbed, r=5)
+ftd:			filtered * disturbed
+r1 				ftd > 0.2
+r2 				ftd > 0.3
+r3 				ftd > 0.4
+r4 				ftd > 0.5
+r5 				ftd > 0.6
+
+new = r1 + r2 + r3 + r4 + r5 + strata_original * 10
+
+
+
+
+
+
+
+
